@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Footer, Header } from "./components";
+import { Home, About, Service } from "./containers";
+import "./assets/stylesheet/global.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header
+        menu={[
+          { name: "home", src: "#home" },
+          { name: "service", src: "#service" },
+          { name: "about", src: "#about" },
+        ]}
+        locale={true}
+      />
+      <Home />
+      <Service />
+      <About />
+      <Footer />
+    </React.Fragment>
   );
 }
 

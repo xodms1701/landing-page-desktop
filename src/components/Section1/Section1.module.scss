@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  width: 100%;
+  max-width: 1200px;
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    width: 540px;
+    height: 440px;
+    > img {
+      width: inherit;
+    }
+  }
+
+  .right {
+    h2 {
+      margin-bottom: 32px;
+    }
+
+    .content {
+      color: #737b7d;
+      margin-bottom: 56px;
+    }
+
+    .button-wrapper {
+      button {
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}
